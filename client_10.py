@@ -1,11 +1,14 @@
 import socket
 import send
+import sys
 TCP_IP = '162.243.73.199'
 TCP_PORT = 9999
 Buffer_Size = 1024
 
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
+if len(sys.argv) == 2:
+    username = sys.argv[1]
 
 
 # Got this method grom geekforgeeks.

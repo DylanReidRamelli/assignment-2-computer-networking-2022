@@ -1,5 +1,6 @@
 import socket 
 import send
+import sys
 
 UDP_IP = '162.243.73.199'
 UDP_PORT = 9991 
@@ -8,6 +9,9 @@ buffer_Size = 1024
 
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
+
+if len(sys.argv) == 2:
+	username = sys.argv[1]
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)

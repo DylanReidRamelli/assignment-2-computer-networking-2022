@@ -1,12 +1,16 @@
 import socket 
 import random
 import send
+import sys
 TCP_IP = '162.243.73.199'
 TCP_PORT = 9996 
 Buffer_Size = 1024
 
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
+
+if len(sys.argv) == 2:
+    username = sys.argv[1]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))

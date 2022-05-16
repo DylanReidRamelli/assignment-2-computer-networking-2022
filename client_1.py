@@ -1,11 +1,16 @@
 import socket
 import send
-
+import sys
 TCP_IP = '162.243.73.199'
 TCP_PORT = 9990 
 Buffer_Size = 102400
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
+
+print(sys.argv)
+
+if len(sys.argv) == 2:
+	username = sys.argv[1]
 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

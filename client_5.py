@@ -1,6 +1,8 @@
 import socket
 import send
 
+import sys
+
 #A[0] = L value
 #A[1] = mb, kb,...
 #A[2] = R1 value
@@ -67,6 +69,9 @@ Buffer_Size = 1024
 
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
+
+if len(sys.argv) == 2:
+    username = sys.argv[1]
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((TCP_IP, TCP_PORT))

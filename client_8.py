@@ -8,6 +8,9 @@ Buffer_Size = 1024
 username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
 
+if len(sys.argv) == 2:
+	username = sys.argv[1]
+
 
 # Found this on stack. 
 # https://stackoverflow.com/questions/2733788/convert-ip-address-string-to-binary-in-python
