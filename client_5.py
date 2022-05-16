@@ -16,72 +16,50 @@ kbps = 'Kbps'
 mbps = 'Mbps'
 gbps = 'Gbps'
 
+def small_calc_func(L,R1,R2):
+    return (L/R1) + (L/R2)
+
 def transmission_delay(A):
     L = int(A[0])
     R1 = int(A[2])
     R2 = int(A[4])
-    # You can reuse code written in each if/elif block using a function
     if A[1] == bits:
         if A[3] == mbps:
              L = L * 0.000001
-             td1 = L/R1
-             td2 = L/R2
-             return td1 + td2
+             return small_calc_func(L,R1,R2)
         elif A[3] == kbps:
             L = L * 0.001
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
         elif A[3] == gbps:
             L = L * 0.000000001
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
     elif A[1] == kb:
         if A[3] == mbps:
              L = L * 0.001
-             td1 = L/R1
-             td2 = L/R2
-             return td1 + td2
+             return small_calc_func(L,R1,R2)
         elif A[3] == kbps:
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
         elif A[3] == gbps:
             L = L * 0.000001
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
     elif A[1] == mb:
         if A[3] == mbps:
-             td1 = L/R1
-             td2 = L/R2
-             return td1 + td2
+             return small_calc_func(L,R1,R2)
         elif A[3] == kbps:
             L = L * 1000
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
         elif A[3] == gbps:
             L = L * 0.001
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
     elif A[1] == gb:
         if A[3] == mbps:
             L = L * 1000
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
         elif A[3] == kbps:
             L = L * 1000000
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
         elif A[3] == gbps:
-            td1 = L/R1
-            td2 = L/R2
-            return td1 + td2
+            return small_calc_func(L,R1,R2)
 
 TCP_IP = '162.243.73.199'
 TCP_PORT = 9994 

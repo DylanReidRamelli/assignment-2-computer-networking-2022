@@ -9,7 +9,8 @@ username = 'dylan.reid.ramelli'
 username2 = 'kirustika.mohanathas'
 
 
-# Found this on stack.
+# Found this on stack. 
+# https://stackoverflow.com/questions/2733788/convert-ip-address-string-to-binary-in-python
 def ip2bin(ip):
     octets = map(int, ip.split('/')[0].split('.'))
     binary = '{0:08b}{1:08b}{2:08b}{3:08b}'.format(*octets)
